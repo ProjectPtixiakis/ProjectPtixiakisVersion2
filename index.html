@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTP vs HTTPS</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="How HTTP and HTTPS Work: Understanding the Difference" />
+  <meta name="description" content="A clear and simple explanation of how HTTP and HTTPS work, why HTTPS matters, and the key differences between them." />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://projectptixiakis.github.io/ProjectPtixiakis/" />
+  <meta property="og:title" content="How HTTP and HTTPS Work: Understanding the Difference" />
+  <meta property="og:description" content="A simple explanation of HTTP vs HTTPS, how encryption works, and why HTTPS keeps your data safe." />
+  <meta property="og:image" content="https://projectptixiakis.github.io/ProjectPtixiakis/images/muztagh-9883659_1920.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://projectptixiakis.github.io/ProjectPtixiakis/" />
+  <meta name="twitter:title" content="How HTTP and HTTPS Work: Understanding the Difference" />
+  <meta name="twitter:description" content="A beginner-friendly guide to HTTP vs HTTPS and why encryption matters." />
+  <meta name="twitter:image" content="https://projectptixiakis.github.io/ProjectPtixiakis/images/muztagh-9883659_1920.jpg" />
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://projectptixiakis.github.io/ProjectPtixiakis/" />
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 4rem auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #0078D7;
+    }
+    h1 {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    ul {
+      margin: 1rem 0 1rem 1.5rem;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>How HTTP and HTTPS Work: Understanding the Difference</h1>
+
+    <img src="https://projectptixiakis.github.io/ProjectPtixiakis/images/muztagh-9883659_1920.jpg" alt="Mountain landscape" />
+
+    <h2>What is HTTP?</h2>
+    <p>HTTP stands for <strong>Hypertext Transfer Protocol</strong>. It’s the foundation of data communication on the web. When you type a website address like <code>http://example.com</code> into your browser, your computer sends a request to the server that hosts the site. The server then responds with the requested web page, which your browser displays.</p>
+    <p>HTTP uses a request-response model. The client (your browser) sends an HTTP request, and the server responds with an HTTP response that includes the content you asked for, usually HTML, CSS, images, or scripts. The process looks something like this:</p>
+    <ul>
+      <li>The user enters a URL or clicks a link.</li>
+      <li>The browser sends an HTTP request to the server.</li>
+      <li>The server processes the request and returns a response.</li>
+      <li>The browser displays the received page.</li>
+    </ul>
+    <p>The important thing to note is that HTTP is a <em>plaintext</em> protocol. This means that the data sent between the browser and the server is not encrypted. Anyone who can intercept the communication — such as someone on the same Wi-Fi network or a malicious ISP — can read or even modify the information being transferred. For example, login credentials, credit card numbers, or other sensitive data sent over plain HTTP can easily be stolen.</p>
+
+    <h2>What is HTTPS?</h2>
+    <p>HTTPS is the secure version of HTTP. The “S” stands for “Secure.” It uses the same basic structure and request-response model as HTTP but adds an extra layer of protection through encryption. HTTPS achieves this security by using a combination of protocols: SSL (Secure Sockets Layer) and its successor, TLS (Transport Layer Security).</p>
+    <p>When a browser connects to a website using HTTPS, it first establishes a secure, encrypted channel before any actual data is exchanged. This ensures that the communication cannot be read or tampered with by third parties. The encryption process involves several steps, commonly known as the SSL/TLS handshake.</p>
+    <p>Here’s what happens in simple terms:</p>
+    <ul>
+      <li>The browser sends a request to connect to the server using HTTPS.</li>
+      <li>The server sends back its SSL/TLS certificate, which includes its public key.</li>
+      <li>The browser verifies that the certificate is valid and issued by a trusted Certificate Authority (CA).</li>
+      <li>The browser and server then agree on encryption methods and create a shared session key.</li>
+      <li>All communication after that is encrypted using this key.</li>
+    </ul>
+    <p>This process happens in milliseconds, invisible to the user, but it ensures that data like passwords, personal details, or credit card information remains private.</p>
+
+    <h2>Key Differences Between HTTP and HTTPS</h2>
+    <p>The most obvious difference is security. HTTP transmits data in plain text, while HTTPS encrypts it. But there are other important distinctions as well:</p>
+    <ul>
+      <li><strong>Encryption:</strong> HTTPS uses TLS encryption to protect data in transit. Even if someone intercepts the data, they cannot read or alter it.</li>
+      <li><strong>Authentication:</strong> Browsers verify the website’s SSL certificate for HTTPS, helping confirm you’re connecting to the legitimate server and not a fake site.</li>
+      <li><strong>Data Integrity:</strong> HTTPS ensures the data sent and received has not been modified in transit. Any tampering would break the connection.</li>
+      <li><strong>SEO and Browser Trust:</strong> Search engines favor HTTPS sites, and modern browsers warn users when visiting insecure HTTP pages.</li>
+      <li><strong>Performance:</strong> With modern protocols like HTTP/2 and TLS 1.3, HTTPS can be as fast—or faster—than old HTTP connections.</li>
+    </ul>
+
+    <h2>Why HTTPS Matters</h2>
+    <p>HTTPS is effectively the minimum standard for modern websites. Without it, sensitive data can be exposed, users can be impersonated, and trust in a site will erode. Browsers and search engines increasingly penalize or block insecure HTTP traffic, and most major sites now use HTTPS for all pages, not just login or payment pages.</p>
+
+    <h2>Conclusion</h2>
+    <p>HTTP and HTTPS serve the same basic purpose: transferring data between your browser and a web server. The critical difference is that HTTPS adds encryption, authentication, and integrity, turning ordinary web communication into secure communication. In short: HTTP built the web, and HTTPS keeps it safe.</p>
+
+    <footer>
+      <p>Generated for testing purposes.</p>
+    </footer>
+  </div>
+</body>
+</html>
