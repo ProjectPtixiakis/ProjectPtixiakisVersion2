@@ -1,156 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloudflare Overview</title>
 
-    <title>CSRF Attack Research | Web Security</title>
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Cloudflare: How It Protects and Accelerates the Web" />
+  <meta name="description" content="A short overview of Cloudflare, what it does, and why companies use it to secure and speed up their websites." />
 
-    <!-- Basic SEO -->
-    <meta name="description" content="A simple research article explaining Cross-Site Request Forgery (CSRF) attacks, how they work, examples, impacts, and prevention techniques.">
-    <meta name="author" content="Project Ptixiakis">
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://projectptixiakis.github.io/ProjectPtixiakis/" />
+  <meta property="og:title" content="Cloudflare: How It Protects and Accelerates the Web" />
+  <meta property="og:description" content="Learn what Cloudflare is and how it helps websites stay fast and secure." />
+  <meta property="og:image" content="PicAfter" />
 
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, Discord) -->
-    <meta property="og:title" content="Cross-Site Request Forgery (CSRF) Attack">
-    <meta property="og:description" content="Learn what CSRF attacks are, how they work, real examples, and how to prevent them. Simple research article for web security.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://projectptixiakis.github.io/ProjectPtixiakisVersion2/csrf.html">
-    <meta property="og:image" content="https://projectptixiakis.github.io/ProjectPtixiakisVersion2/images/pexels-visionsiargao-8564267.jpg">
-    <meta property="og:image:alt" content="Web security illustration related to CSRF attacks">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloudflare: How It Protects and Accelerates the Web" />
+  <meta name="twitter:description" content="A simple explanation of Cloudflare and its role on the modern web." />
+  <meta name="twitter:image" content="PicAfter" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cross-Site Request Forgery (CSRF) Attack">
-    <meta name="twitter:description" content="Simple explanation of CSRF attacks, their impact, and prevention methods.">
-    <meta name="twitter:image" content="https://projectptixiakis.github.io/ProjectPtixiakisVersion2/images/pexels-visionsiargao-8564267.jpg">
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://projectptixiakis.github.io/ProjectPtixiakis/" />
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1, h2 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
-        }
-
-        code {
-            background: #eee;
-            padding: 4px 6px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-
-        .csrf-image {
-            width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 6px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 4rem auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #0078D7;
+    }
+    h1 {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Cloudflare: What It Is and Why It Matters</h1>
 
-    <div class="container">
-        <h1>Cross-Site Request Forgery (CSRF) Attack</h1>
+    <img src="PicAfter" alt="Cloudflare infrastructure illustration" />
 
-        <img 
-            src="images/pexels-visionsiargao-8564267.jpg" 
-            alt="Illustration related to web security and CSRF attacks"
-            class="csrf-image"
-        >
+    <h2>What is Cloudflare?</h2>
+    <p>Cloudflare is a global technology company that provides security, performance, and reliability services for websites and online applications. Instead of visitors connecting directly to a website’s server, Cloudflare acts as an intermediary, routing traffic through its worldwide network of data centers.</p>
 
-        <h2>Introduction</h2>
-        <p>
-            Cross-Site Request Forgery (CSRF) is a web security vulnerability that forces a user
-            to perform unwanted actions on a trusted website where they are already authenticated.
-            The attack abuses the trust that a website has in the user’s browser.
-        </p>
+    <h2>How Cloudflare Helps Websites</h2>
+    <p>By sitting between users and the origin server, Cloudflare can filter malicious traffic, block common attacks, and reduce server load. At the same time, it improves performance by caching content closer to users, which results in faster page load times and a smoother browsing experience.</p>
 
-        <h2>What is a CSRF Attack?</h2>
-        <p>
-            A CSRF attack happens when a malicious website sends a request to another website
-            on behalf of a logged-in user. Since the browser automatically sends authentication
-            cookies, the target website believes the request is legitimate.
-        </p>
+    <h2>Why Companies Use Cloudflare</h2>
+    <p>Companies use Cloudflare to protect their websites from downtime, cyber threats, and performance issues. Its services help ensure websites remain secure, available, and fast, even during traffic spikes or attempted attacks.</p>
 
-        <h2>How CSRF Works</h2>
-        <p>
-            1. A user logs into a trusted website.<br>
-            2. The website stores authentication data in the browser (cookies).<br>
-            3. The user visits a malicious website.<br>
-            4. The malicious site sends a hidden request to the trusted website.<br>
-            5. The browser includes authentication cookies automatically.<br>
-            6. The action is executed without the user’s consent.
-        </p>
-
-        <h2>Example of a CSRF Attack</h2>
-        <p>
-            Consider a website that allows users to change their email using the following link:
-        </p>
-        <code>https://example.com/change-email?email=new@email.com</code>
-        <p>
-            If the user is logged in, an attacker can trigger this request from a malicious page,
-            causing the email address to change without permission.
-        </p>
-
-        <h2>Impact of CSRF Attacks</h2>
-        <p>
-            - Unauthorized money transfers<br>
-            - Account detail changes<br>
-            - Data deletion<br>
-            - Administrative actions
-        </p>
-
-        <h2>How to Prevent CSRF Attacks</h2>
-        <p>
-            - CSRF tokens<br>
-            - SameSite cookie attributes<br>
-            - Checking HTTP Origin or Referer headers<br>
-            - Re-authentication for sensitive actions
-        </p>
-
-        <h2>CSRF vs XSS</h2>
-        <p>
-            CSRF forces users to perform actions without their knowledge, while XSS
-            injects malicious scripts into a website. Both are dangerous but work differently.
-        </p>
-
-        <h2>Conclusion</h2>
-        <p>
-            CSRF is a serious security threat that exploits browser behavior and user trust.
-            Understanding how CSRF works and applying proper protection techniques is essential
-            for building secure web applications.
-        </p>
-
-        <footer>
-            <p>Research Project – Web Security</p>
-        </footer>
-    </div>
-
+    <footer>
+      <p>Generated for testing purposes.</p>
+    </footer>
+  </div>
 </body>
 </html>
